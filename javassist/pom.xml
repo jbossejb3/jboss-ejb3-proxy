@@ -1,0 +1,58 @@
+<!--
+  vi:ts=2:sw=2:expandtab
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <!-- Define Parent -->
+  <parent>
+    <groupId>org.jboss.ejb3.proxy</groupId>
+    <artifactId>proxy-build</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+    <relativePath>../build/pom.xml</relativePath>
+  </parent>
+
+  <!-- Maven POM Model Version -->
+  <modelVersion>4.0.0</modelVersion>
+
+  <!-- Artifact Information -->
+  <artifactId>proxy-javassist</artifactId>
+  <packaging>jar</packaging>
+  <name>Javassist based implementation of proxy SPI</name>
+  <description>Javassist based implementation of proxy SPI</description>
+
+  
+  
+  <properties>
+  
+    <version.javassist>3.7.1.GA</version.javassist>
+  
+  </properties>
+
+  <dependencies>
+    <dependency>
+		<groupId>org.jboss.ejb3.proxy</groupId>
+		<artifactId>proxy-spi</artifactId>
+		<version>${project.version}</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>javassist</groupId>
+		<artifactId>javassist</artifactId>
+		<version>${version.javassist}</version>
+	</dependency>
+	
+	
+	<!-- ********************** -->
+	<!-- Test dependencies -->
+	<!-- ********************** -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+	  <scope>test</scope>
+    </dependency>
+    
+    
+  </dependencies>
+</project>

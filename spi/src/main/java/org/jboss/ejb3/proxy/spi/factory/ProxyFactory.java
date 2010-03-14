@@ -36,11 +36,30 @@ public interface ProxyFactory
    //-------------------------------------------------------------------------------------||
    // Contracts --------------------------------------------------------------------------||
    //-------------------------------------------------------------------------------------||
-
+   
    /**
     * Creates a proxy which is castable to the specified type(s) passed;
     * the specified {@link InvocationHandler} will service requests
     * 
+    * @param cl The classloader to use for creating the proxy
+    * @param types Target types supported by the returned proxy.  In some implementations,
+    *   this may require an array of interfaces; in others a concrete base class must be supplied.
+    *   It is the responsibility of implementors to throw {@link IllegalArgumentException} on 
+    *   unsupported input
+    * @param invocationHandler Underlying handler used to service invocations upon the returned proxy; must
+    * not be null else {@link IllegalArgumentException} will be raised
+    * @throws IllegalArgumentException
+    */
+   Object createProxy(ClassLoader cl, Class<?>[] types, InvocationHandler invocationHandler) throws IllegalArgumentException;
+
+   /**
+    * Creates a proxy which is castable to the specified type(s) passed;
+    * the specified {@link InvocationHandler} will service requests
+    * <p>
+    *  It's upto the implementation to use a classloader of their choice to create the proxy. If the calling
+    *  code expects a specific classloader to be used for proxy creation, then use the other {@link #createProxy(ClassLoader, Class[], InvocationHandler)}
+    *  method.
+    * </p>
     * @param types Target types supported by the returned proxy.  In some implementations,
     *   this may require an array of interfaces; in others a concrete base class must be supplied.
     *   It is the responsibility of implementors to throw {@link IllegalArgumentException} on 

@@ -72,13 +72,11 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <configuration>
           <redirectTestOutputToFile>true</redirectTestOutputToFile>
-          <trimStackTrace>false</trimStackTrace>
-          <printSummary>true</printSummary>
-          <includes>
-            <include>**/*UnitTest.java</include>
-          </includes>
-          <forkMode>always</forkMode>
-          <useFile>true</useFile>
+            <printSummary>true</printSummary>
+            <forkMode>always</forkMode>
+            <includes>
+                <include>**/*TestCase.java</include>
+            </includes>
         </configuration>
       </plugin>
 

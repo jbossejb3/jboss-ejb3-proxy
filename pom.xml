@@ -45,6 +45,8 @@
   <modules>
     <module>spi</module>
     <module>build</module>
+	<module>reflect</module>
+    <module>javassist</module>
   </modules>
 
 </project>
