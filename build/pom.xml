@@ -9,7 +9,7 @@
   <parent>
     <groupId>org.jboss</groupId>
     <artifactId>jboss-parent</artifactId>
-    <version>4</version>
+    <version>5</version>
   </parent>
 
   <!-- Model Version -->
@@ -32,12 +32,12 @@
 
   </properties>
 
-  <!-- SCM -->
-  <scm>
-    <connection>scm:svn:http://anonsvn.jboss.org/repos/jbossas/projects/ejb3/components/proxy/trunk</connection>
-    <developerConnection>scm:svn:https://svn.jboss.org/repos/jbossas/projects/ejb3/components/proxy/trunk</developerConnection>
-    <url>http://anonsvn.jboss.org/repos/jbossas/projects/ejb3/components/proxy/trunk</url>
-  </scm>
+   <!-- SCM -->
+   <scm>
+     <connection>scm:git:git://github.com/jbossejb3/jboss-ejb3-proxy.git</connection>
+     <developerConnection>scm:git:git@github.com:jbossejb3/jboss-ejb3-proxy.git</developerConnection>
+     <url>http://github.com/jbossejb3/jboss-ejb3-proxy</url>
+   </scm>
 
   <!-- Issues -->
   <issueManagement>
