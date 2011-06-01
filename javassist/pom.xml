@@ -26,7 +26,7 @@
   
   <properties>
   
-    <version.javassist>3.7.1.GA</version.javassist>
+    <version.javassist>3.12.0.GA</version.javassist>
   
   </properties>
 

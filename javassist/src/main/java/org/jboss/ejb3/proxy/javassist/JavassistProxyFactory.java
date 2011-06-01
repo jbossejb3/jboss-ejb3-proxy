@@ -102,15 +102,11 @@ public class JavassistProxyFactory implements ProxyFactory
       // Javassist internally uses the classloader of this "superclass" for
       // proxy creation
       javassistProxyFactory.setSuperclass(types[0]);
-      // Set our method handler which is responsible for handling the method invocations
-      // on the proxy
-      javassistProxyFactory.setHandler(new JavassistInvocationHandlerAdapter(invocationHandler));
-
       // create the proxy
       Object proxy;
       try
       {
-         proxy = javassistProxyFactory.create(new Class[0], new Object[0]);
+         proxy = javassistProxyFactory.create(new Class[0], new Object[0], new JavassistInvocationHandlerAdapter(invocationHandler));
       }
       catch (Exception e)
       {
