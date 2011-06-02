@@ -18,7 +18,7 @@
   <!-- Artifact Configuration -->
   <groupId>org.jboss.ejb3.proxy</groupId>
   <artifactId>proxy-build</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0.0</version>
   <name>JBoss EJB 3.x Proxy Build</name>
   <description>Centralized Build Configuration for EJB 3.x Proxy Support</description>
   <packaging>pom</packaging>
